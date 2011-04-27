@@ -1,3 +1,10 @@
+- content_for :header do
+  .skinny-header
+    %div{:style => "padding-top: 1px; width: 820px; margin: auto;"}
+    Administration - New Post
+
+
+      
 %h1(style="margin-bottom: 15px;") Give a Recommendation
 = simple_form_for @website_post, :html => {:multipart => true} do |f|
   .left
@@ -9,7 +16,6 @@
         Thumbnail (optional):
     .form-inputs
       = f.input :title, :label => false, :style => "width: 271px;"
-      = f.input :url, :label => false, :style => "width: 271px;"
       = f.text_area :description, :label => false, :style => "height: 40px; width: 271px;"
       %br/
       = f.file_field :thumbnail

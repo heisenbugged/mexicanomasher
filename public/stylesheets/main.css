@@ -54,6 +54,9 @@ body {
     background-color: #f3f3f3;
 	font-family: Arial, Helvetica, sans-serif;
 }
+a {
+     color: #fd7641;
+}
 h1 { font-size: 30px; font-family: 'Ubuntu', "Lucida Grande", Arial, Helvetica, sans-serif; color: #333333;}
 h1.title {    
     color: #fd7641;
@@ -128,22 +131,56 @@ h1.title {
     color: white;
     text-decoration: none
 }
+.skinny-header {
+    height: 117px;
+    background-color: #e5440a;
+    border-bottom: 1px solid white;
+    padding-left: 300px;
+    color: white;
+    font-size: 30px;
+    font-family: 'Ubuntu', "Lucida Grande", Arial, Helvetica, sans-serif;
+    line-height: 147px;
+}
 .featured {
     height: 445px;
     background-color: #12b3ed;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid white;    
+}
+.start-link {
+    padding-top: 80px;
+    text-align: left;
+}
+.featured-image {
+    float: left;
+    padding-top: 54px;
+    margin-left: 25px;
+}
+.featured-title {
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Ubuntu', "Lucida Grande", Arial, Helvetica, sans-serif;
+    text-align: right;
+}
+.featured-description-content {
+    padding: 10px;
+    line-height: 45px;
+    text-align: right;
 }
 .featured-description {
-    margin-left: 360px;
+    float: left;
     margin-top: 70px;
-    width: 580px;
-    height: 340px;
+    width: 500px;
+    height: 300px;
     background-color: #1192c0;
-    color: white;
+    color: #a0d8ff;
+    padding: 20px;
 
     border-radius: 10px;
     -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;               
+    -webkit-border-radius: 10px;
+
+    font-size: 25px;
 }
 /* images */
 #logo {
@@ -159,30 +196,21 @@ h1.title {
     padding-bottom: 29px;
 
     width: 262px;
-    height: 193px;    
+    /*height: 193px;*/    
 }
 .website-last {
     padding-right: 0px;
 }
-.website-title {    
+.website-title {
+    width: 242px;
     font-size: 23px;
     font-style: italic;
     font-family: 'Ubuntu', "Lucida Grande", Arial, Helvetica, sans-serif;
-    background-color: #fafafa;
-    position: relative;
-    margin-top: -21px;
-    margin-right: -1px;
-    float: right;
-    width: auto;
-    display: block;
-    padding-left: 5px;
-    padding-right: 5px;
-
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-
-    text-shadow: 0.05em 0.05em #cccccc;
+    float: left;
+    padding: 10px;
+    background-color: #4c4c4c;
+    /*text-shadow: 0.05em 0.05em #cccccc;*/
+    color: white;
 
 }
 .more, .submit-button {
@@ -211,7 +239,7 @@ h1.title {
 .links {
     float: left; margin-top: 10px; font-size: 15px;
     font-family: Trebuchet MS, Tahoma, Geneva, sans-serif;
-    padding-left: 360px;
+    padding-left: 310px;
 }
 .links a { color: #fff; text-decoration: none; }
 .link a {
@@ -228,6 +256,83 @@ h1.title {
 .link a.active {
     color: #fd7641;
 }
+.orange {
+    color: #fd7641;
+}
 
 .clear { clear: both; }
 .left { float: left; }
+
+
+
+
+/* Success, error & notice boxes for messages and errors. */
+div.error, div.notice, div.success, span.error,
+#flash_failure, #flash_success, #flash_notice {
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 1em;
+  padding: 0.8em; }
+
+div.error, span.error,
+#flash_failure {
+  background: #FBE3E4;
+  border-color: #FBC2C4;
+  color: #D12F19; }
+
+div.error a, span.error,
+#flash_failure a {
+  color: #D12F19; }
+
+div.notice,
+#flash_notice {
+  background: #FFF6BF;
+  border-color: #FFD324;
+  color: #817134; }
+
+div.notice a,
+#flash_notice a {
+  color: #817134; }
+
+div.success,
+#flash_success {
+  background: #E6EFC2;
+  border-color: #C6D880;
+  color: #529214; }
+
+div.success a,
+#flash_success a {
+  color: #529214; }
+
+
+
+
+
+/* Flutie default styles overrides **/
+#main_notice.notice, #main_error.error {
+    border-color: white;
+    border-width: 0;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    margin-bottom: 0px;
+}
+span.error, #error_explanation {
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 1em;
+  padding: 0.8em; }
+
+span.error, #error_explanation {
+  background: #FBE3E4;
+  border-color: #FBC2C4;
+  color: #D12F19; }
+
+#error_explanation h2 {
+    color: #D12F19;
+    font-size: 18px;
+}
+span.error, #error_explanation {
+  color: #D12F19; }

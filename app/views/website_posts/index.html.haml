@@ -1,4 +1,20 @@
 -#= image_tag "featured.png", :id => "featured-text", :alt => "Featured Websites"
+- content_for :header do
+  .featured
+    %div{:style => "padding-top: 1px; width: 820px; margin: auto;"}
+      .featured-description
+        .featured-title Hazte un Jedi
+        .featured-description-content
+          El poder de la fuerza esta en tus manos
+          %br/
+          Convierte a tus amigos en super jedis
+          %br/
+          Que la fuerza este contigo!
+          .start-link
+            = image_tag "empieza-btn.png"
+      = image_tag "jedi.png", :class => "featured-image"
+    .clear
+
 #featured-text
   %h1.title Tarjetas Populares
 - index = 0
@@ -6,14 +22,12 @@
   - index = index+1
   - unless index % 3 == 0
     .website
-      = link_to website_post.url do
-        = image_tag website_post.thumbnail.url(:medium)
+      = image_tag website_post.thumbnail.url(:medium)
       %br/
-      %span.website-title= website_post.title
+      .website-title= website_post.title
   - else
     .website-last
-      = link_to website_post.url do
-        = image_tag website_post.thumbnail.url(:medium)
+      = image_tag website_post.thumbnail.url(:medium)
       %br/
-      %span.website-title= website_post.title
+      .website-title= website_post.title
 .clear
