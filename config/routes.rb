@@ -5,5 +5,6 @@ Beautifulwebsites::Application.routes.draw do
   resources :website_posts
   resources :frontpage_texts
   match '/about' => "home#about"
+  match '/admin_panel' => "admin_panel#index"
   match '/contact' => "home#contact"
 end

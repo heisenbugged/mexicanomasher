@@ -7,9 +7,13 @@
 = simple_form_for @frontpage_text, :html => {:multipart => true} do |f|
   .left
     .form-labels
-      HTML Content: <br/>
+      Title:
+      <br/>
+      HTML Description: <br/>
 
     .form-inputs
+      = f.text_field :title, :label => false, :style => "width: 300px;"
+      <br/>
       = f.text_area :content, :label => false, :style => "height: 120px; width: 300px;"
       
     .clear

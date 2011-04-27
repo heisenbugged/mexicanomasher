@@ -3,7 +3,11 @@
   .featured
     %div{:style => "padding-top: 1px; width: 820px; margin: auto;"}
       .featured-description
-        =@frontpage_text.content
+        .featured-title
+          Become a Jedi
+        .featured-description-content
+          =@frontpage_text.content
+      = image_tag "jedi.png", :class => "featured-image"
     .clear
 
 #featured-text
@@ -16,9 +20,12 @@
       = image_tag website_post.thumbnail.url(:medium), :click=>'showPop();'
       %br/
       .website-title= website_post.title
+      .website-description= website_post.description
   - else
     .website-last
       = image_tag website_post.thumbnail.url(:medium), :click=>'showPop();'
       %br/
       .website-title= website_post.title
+      .website-description= website_post.description
+            
 .clear

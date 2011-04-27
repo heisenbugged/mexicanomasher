@@ -10,6 +10,7 @@
     :javascript
       Cufon.replace('h1');
       Cufon.replace('.link');
+      Cufon.replace('.about');
             
     = csrf_meta_tag
           
@@ -27,7 +28,7 @@
           %span.link= link_to "Cerrar Sesion", destroy_user_session_path
 
           - if current_user.admin?
-            %span.link= link_to "Admin Panel", new_website_post_path
+            %span.link= link_to "Admin Panel", admin_panel_path
             
           .right{:style => "margin-right: 30px;"}
             .link

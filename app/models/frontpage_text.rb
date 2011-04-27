@@ -3,5 +3,6 @@ class FrontpageText
   include Mongoid::Timestamps
   
   field :content
-
+  field :title
+  
 end
