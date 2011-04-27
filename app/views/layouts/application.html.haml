@@ -1,0 +1,41 @@
+!!!
+%html
+  %head
+    %title Mexicano Masher
+    = stylesheet_link_tag :all
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+    :plain
+      <link  href="http://fonts.googleapis.com/css?family=Ubuntu:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css" >      
+  %body
+    #logo
+      = link_to root_url do
+        = image_tag "logo.png", :id => "logo", :alt =>"Mexicano Masher"
+    .top
+      .links
+        %span.link= link_to "Tarjetas populares", root_url, :class => 'active'
+        -#%span.link= link_to "Submit a Website", new_website_post_url
+        %span.link= link_to "Nuestra Empresa", '/about'
+        - if user_signed_in?
+          %span.link= link_to "Sign out", destroy_user_session_path
+        - else
+          %span.link= link_to "Sign out", destroy_user_session_path
+
+        -# highlight_current_link do |n|
+          %span.link= n.link_to "Home", root_url
+          %span.link= n.link_to "Submit a Website", new_website_post_url
+          %span.link= n.link_to "Contact", '/contact'
+          %span.link= n.link_to "About Us", '/about'
+          - if admin_signed_in?
+            %span.link= n.link_to "Sign out", destroy_admin_session_path
+    .featured
+      %div{:style => "padding-top: 1px;"}
+        .featured-description
+          
+    .main
+      .content
+        %p.notice= notice
+        %p.alert= alert
+
+        = yield
+

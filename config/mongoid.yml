@@ -1,0 +1,23 @@
+defaults: &defaults
+  host: localhost
+  # slaves:
+  #   - host: slave1.local
+  #     port: 27018
+  #   - host: slave2.local
+  #     port: 27019
+
+development:
+  <<: *defaults
+  database: masher_development
+
+test:
+  <<: *defaults
+  database: masher_test
+
+# set these environment variables on your prod server
+production:
+  host: flame.mongohq.com
+  port: 27062
+  username: root
+  password: root
+  database: beautifulwebsites
