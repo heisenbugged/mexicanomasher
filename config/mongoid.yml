@@ -20,4 +20,4 @@ production:
   port: 27062
   username: root
   password: root
-  database: beautifulwebsites
+  database: mexicanomasher
