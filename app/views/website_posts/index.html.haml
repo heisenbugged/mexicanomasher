@@ -13,12 +13,12 @@
   - index = index+1
   - unless index % 3 == 0
     .website
-      = image_tag website_post.thumbnail.url(:medium)
+      = image_tag website_post.thumbnail.url(:medium), :click=>'showPop();'
       %br/
       .website-title= website_post.title
   - else
     .website-last
-      = image_tag website_post.thumbnail.url(:medium)
+      = image_tag website_post.thumbnail.url(:medium), :click=>'showPop();'
       %br/
       .website-title= website_post.title
 .clear

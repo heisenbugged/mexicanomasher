@@ -32,6 +32,9 @@ gem 'thin', '~> 1.2.7'
 # Auth
 gem 'devise', '~> 1.1.5'
 
+#jQuery
+gem 'jquery-rails', '>= 0.2.6'
+
 # Test gems with generators (available in dev env)
 group :development, :test do
   gem 'rspec-core', '~> 2.3.1'
