@@ -25,6 +25,8 @@
       = image_tag website_post.thumbnail.url(:medium)
       %br/
       .website-title= website_post.title
+      .website-description
+        = website_post.description
   - else
     .website-last
       = image_tag website_post.thumbnail.url(:medium)

@@ -16,10 +16,20 @@
         %span.link= link_to "Tarjetas populares", root_url, :class => 'active'
         -#%span.link= link_to "Submit a Website", new_website_post_url
         %span.link= link_to "Nuestra Empresa", '/about'
-        - if user_signed_in?
-          %span.link= link_to "Sign out", destroy_user_session_path
+        - if user_signed_in?          
+          %span.link= link_to "Mi Cuenta", edit_user_registration_path
+          %span.link= link_to "Cerrar Sesion", destroy_user_session_path
+
+          - if current_user.admin?
+            %span.link= link_to "Admin Panel", new_website_post_path
+            
+          .right{:style => "margin-right: 30px;"}
+            .link
+              Bienvenido
+              %span.orange #{current_user.full_name}!
         - else
-          %span.link= link_to "Sign in", new_user_session_path
+          %span.link= link_to "Iniciar Sesion", new_user_session_path
+
 
     = yield :header
           

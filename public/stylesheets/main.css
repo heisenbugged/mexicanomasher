@@ -23,6 +23,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+.right {float: right;}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -201,16 +202,20 @@ h1.title {
 .website-last {
     padding-right: 0px;
 }
+.website-description {
+    color: #666;
+    width: 242px;
+    font-size: 14px;
+}
 .website-title {
     width: 242px;
-    font-size: 23px;
-    font-style: italic;
-    font-family: 'Ubuntu', "Lucida Grande", Arial, Helvetica, sans-serif;
-    float: left;
-    padding: 10px;
-    background-color: #4c4c4c;
+    font-size: 20px;    
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 10px;
+    color: #535353;
+    font-weight: bold;
     /*text-shadow: 0.05em 0.05em #cccccc;*/
-    color: white;
+
 
 }
 .more, .submit-button {
@@ -237,11 +242,12 @@ h1.title {
     text-align: center;
 }
 .links {
-    float: left; margin-top: 10px; font-size: 15px;
+    margin-top: 10px; font-size: 15px;
     font-family: Trebuchet MS, Tahoma, Geneva, sans-serif;
     padding-left: 310px;
 }
 .links a { color: #fff; text-decoration: none; }
+.link {font-weight: bold;}
 .link a {
     /*
     background-color: #929292;
@@ -249,9 +255,9 @@ h1.title {
     -webkit-border-radius: 5px;
     border-radius: 5px;
         */
+
     padding: 5px;
     margin-right: 10px;
-    font-weight: bold;
 }
 .link a.active {
     color: #fd7641;
