@@ -4,9 +4,14 @@
     %title Mexicano Masher
     = stylesheet_link_tag :all
     = javascript_include_tag :defaults
+    = javascript_include_tag "cufon"
+    = javascript_include_tag "ubuntu.font"
+    :javascript
+      Cufon.replace('h1');
+      Cufon.replace('.link');
+            
     = csrf_meta_tag
-    :plain
-      <link  href="http://fonts.googleapis.com/css?family=Ubuntu:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css" >      
+          
   %body
     #logo
       = link_to root_url do
