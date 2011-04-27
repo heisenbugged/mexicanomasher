@@ -1,0 +1,18 @@
+- content_for :header do
+  .skinny-header
+    %div{:style => "padding-top: 1px; width: 820px; margin: auto;"}
+    Administration - Change the frontpage text
+
+
+= simple_form_for @frontpage_text, :html => {:multipart => true} do |f|
+  .left
+    .form-labels
+      HTML Content: <br/>
+
+    .form-inputs
+      = f.text_area :content, :label => false, :style => "height: 120px; width: 300px;"
+      
+    .clear
+    = f.submit "Submit", :class => "submit-button"
+   
+  .clear

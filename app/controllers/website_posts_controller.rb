@@ -3,5 +3,9 @@ class WebsitePostsController < ApplicationController
   actions :index, :new, :create
   def create
     create! { website_posts_path }
-  end  
+  end
+
+  def index
+    index! { @frontpage_text = FrontpageText.find(:last) }
+  end
 end

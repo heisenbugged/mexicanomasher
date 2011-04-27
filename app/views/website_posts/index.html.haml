@@ -3,17 +3,8 @@
   .featured
     %div{:style => "padding-top: 1px; width: 820px; margin: auto;"}
       .featured-description
-        .featured-title Hazte un Jedi
-        .featured-description-content
-          El poder de la fuerza esta en tus manos
-          %br/
-          Convierte a tus amigos en super jedis
-          %br/
-          Que la fuerza este contigo!
-          .start-link
-            = image_tag "empieza-btn.png"
-      = image_tag "jedi.png", :class => "featured-image"
-    .clear
+        =@frontpage_text.content
+      .clear
 
 #featured-text
   %h1.title Tarjetas Populares
